@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: #132a13;
+}
+
+body {
+
+    background-color:#90a955;
+
+}
+
+header {
+    background-color: #4f772d;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+}
+
+#search-input {
+    padding: .5rem;
+    width: 40%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-weight:500;
+    color: #4f772d;
+    font-size: 1.3rem;
+}
+
+#search-button {
+    font-size: 1.2rem;
+    padding: .5rem;
+    border: 2px solid #ccc;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.meal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 2rem;
+}
+
+.meal-item {
+    background-color: #edf1c2;
+    flex-basis: calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    margin: 10px;
+    padding: .75rem;
+    box-shadow: 0 8px, 24px #132a13;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.meal-item:hover {
+    scale: 1.05;
+}
+
+.meal-item img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.meal-item h3 {
+    text-align: center;
+}
+
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #edf1c2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    overflow: auto;
+}
+
+.modal-container .close-button {
+    font-size: 42px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    text-align: right;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.modal-container .close-button:hover {
+    color: darkgray
+}
+
+.meal-details-content {
+    overflow-y: auto;
+    max-height: 75vh;
+}
+
+.recipe-title {
+    text-align: center;
+    margin-bottom: .3rem;
+}
+
+.recipe-category {
+    text-align: center;
+}
+
+
+#search-box:hover,
+button:hover {
+    background-color: #4f772d;
+    color: #edf1c2;
+}
+
+.recipe-ingredients,
+.recipe-ingredients ul,
+.recipe-instructions,
+.recipe-instructions p {
+    padding: .5rem;
+}
+
+.recipe-ingredients ul {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto ;
+    color: #132a13;
+    text-transform: capitalize;
+    list-style: none;
+}
