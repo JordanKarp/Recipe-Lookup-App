@@ -19,9 +19,18 @@ header {
     padding: 1rem;
 }
 
+header h1 {
+    padding: 1rem;
+    color: #fff
+ }
+
 .search-box {
     display: flex;
     justify-content: center;
+}
+
+.content{
+    min-height: 72vh;
 }
 
 #search-input {
@@ -34,6 +43,7 @@ header {
     font-size: 1.3rem;
 }
 
+#random-button,
 #search-button {
     font-size: 1.2rem;
     padding: .5rem;
@@ -143,4 +153,11 @@ button:hover {
     color: #132a13;
     text-transform: capitalize;
     list-style: none;
+}
+
+
+
+#footer p {
+    text-align: center;
+    padding: 1rem;
 }

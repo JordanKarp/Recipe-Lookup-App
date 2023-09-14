@@ -1,5 +1,6 @@
 const resultContainer = document.getElementById("result");
 const searchBtn = document.getElementById("search-button");
+const randomBtn = document.getElementById("random-button");
 const searchInput = document.getElementById("search-input");
 const mealList = document.querySelector(".meal-list");
 const modalContainer = document.querySelector(".modal-container");
@@ -19,6 +20,8 @@ searchInput.addEventListener("keyup", (e) => {
         performSearch();
     }
 })
+randomBtn.addEventListener("click", randomRecipeSearch)
+
 
 mealList.addEventListener('click', async (e) => {
     const card = e.target.closest('.meal-item');
@@ -30,6 +33,12 @@ mealList.addEventListener('click', async (e) => {
         }
     }
 })
+
+async function randomRecipeSearch() {
+    const response = await fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
+    const data = await response.json();
+    displayMeals(data.meals)
+}
 
 async function performSearch() {
     const ingredient = searchInput.value.trim();
