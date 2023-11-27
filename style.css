@@ -68,7 +68,7 @@ header h1 {
     max-width: calc(25% - 20px);
     margin: 10px;
     padding: .75rem;
-    box-shadow: 0 8px, 24px #132a13;
+    box-shadow: 0 8px 24px #132a13;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 10px;
